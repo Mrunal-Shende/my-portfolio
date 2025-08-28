@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mrunal Shende - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #0f172a;
+            color: #f8fafc;
+        }
+        .text-peach { color: #fca5a5; }
+        .bg-peach { background-color: #fca5a5; }
+        .bg-navy { background-color: #1e293b; }
+        .card-hover:hover { transform: translateY(-5px); transition: 0.3s; }
+    </style>
+</head>
+<body class="leading-relaxed tracking-wide">
+
+    <!-- Header -->
+    <header class="bg-navy shadow-lg sticky top-0 z-50">
+        <nav class="container mx-auto flex justify-between items-center p-4">
+            <h1 class="text-2xl font-bold text-peach">Mrunal Shende</h1>
+            <ul class="flex space-x-6 text-sm md:text-base">
+                <li><a href="#about" class="hover:text-peach">About</a></li>
+                <li><a href="#skills" class="hover:text-peach">Skills</a></li>
+                <li><a href="#projects" class="hover:text-peach">Projects</a></li>
+                <li><a href="#contact" class="hover:text-peach">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+   <!-- Hero Section -->
+<section class="min-h-screen flex items-center justify-between px-10 bg-gradient-to-r from-navy to-dark-navy text-white">
+    
+    <!-- Left Content -->
+    <div>
+        <h1 class="text-5xl font-bold mb-6">Hi, I'm Mrunal Shende 👋</h1>
+        <p class="text-lg text-light-gray mb-6">
+            Full-Stack Developer | Building Scalable Web Apps 🚀
+        </p>
+        <a href="#projects" 
+           class="bg-peach hover:bg-orange px-6 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105">
+            View My Work
+        </a>
+    </div>
+
+    <!-- Right Side: Coder Icon -->
+    <div class="text-9xl text-peach">
+        <i class="fas fa-laptop-code"></i>
+    </div>
+
+</section>
+
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto py-16 px-6">
+        <h2 class="text-3xl font-bold mb-6 text-center">About Me</h2>
+        <p class="text-gray-300 text-center max-w-2xl mx-auto">
+            I’m a Master’s student passionate about building scalable full-stack applications and solving complex problems with clean and efficient code. Experienced in frontend, backend, and database management with a focus on responsive design and performance optimization.
+        </p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="bg-navy py-16 px-6">
+        <h2 class="text-3xl font-bold mb-10 text-center">Technical Skills</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div class="bg-navy p-6 rounded-2xl shadow-lg card-hover text-center">
+                <i class="fas fa-code text-3xl text-peach mb-4"></i>
+                <h3 class="font-semibold mb-2">Programming & Scripting</h3>
+                <p class="text-gray-400">Java, Python (DSA), JavaScript, HTML, CSS</p>
+            </div>
+            <div class="bg-navy p-6 rounded-2xl shadow-lg card-hover text-center">
+                <i class="fas fa-database text-3xl text-peach mb-4"></i>
+                <h3 class="font-semibold mb-2">Databases</h3>
+                <p class="text-gray-400">MySQL, MongoDB, Redis</p>
+            </div>
+            <div class="bg-navy p-6 rounded-2xl shadow-lg card-hover text-center">
+                <i class="fas fa-laptop-code text-3xl text-peach mb-4"></i>
+                <h3 class="font-semibold mb-2">Frameworks & Libraries</h3>
+                <p class="text-gray-400">Node.js, Express.js, React.js, EJS, Socket.IO</p>
+            </div>
+            <div class="bg-navy p-6 rounded-2xl shadow-lg card-hover text-center">
+                <i class="fas fa-plug text-3xl text-peach mb-4"></i>
+                <h3 class="font-semibold mb-2">APIs & Integration</h3>
+                <p class="text-gray-400">REST APIs, Geo Location API, Generative AI APIs</p>
+            </div>
+            <div class="bg-navy p-6 rounded-2xl shadow-lg card-hover text-center">
+                <i class="fas fa-tools text-3xl text-peach mb-4"></i>
+                <h3 class="font-semibold mb-2">Tools & Platforms</h3>
+                <p class="text-gray-400">Git, GitHub, Docker, VS Code</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="container mx-auto py-16 px-6">
+        <h2 class="text-3xl font-bold mb-10 text-center">Projects</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="bg-navy p-6 rounded-2xl shadow-lg card-hover">
+                <h3 class="text-xl font-semibold mb-2">E-commerce Platform</h3>
+                <p class="text-gray-400 mb-4">Developed a scalable online store with product filtering, cart, and payment integration.</p>
+                <a href="#" class="text-peach font-semibold hover:underline">View Project</a>
+            </div>
+            <div class="bg-navy p-6 rounded-2xl shadow-lg card-hover">
+                <h3 class="text-xl font-semibold mb-2">Chat Application</h3>
+                <p class="text-gray-400 mb-4">Real-time chat app using Socket.IO with authentication and private rooms.</p>
+                <a href="#" class="text-peach font-semibold hover:underline">View Project</a>
+            </div>
+            <div class="bg-navy p-6 rounded-2xl shadow-lg card-hover">
+                <h3 class="text-xl font-semibold mb-2">Portfolio Website</h3>
+                <p class="text-gray-400 mb-4">Responsive personal portfolio showcasing projects, skills, and contact details.</p>
+                <a href="#" class="text-peach font-semibold hover:underline">View Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-navy py-16 px-6">
+        <h2 class="text-3xl font-bold mb-10 text-center">Contact Me</h2>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-center max-w-5xl mx-auto">
+            
+            <!-- Phone -->
+            <a href="tel:+918805547785" class="card-hover bg-navy rounded-lg p-6 block">
+                <i class="fas fa-phone text-3xl text-peach mb-3"></i>
+                <h3 class="text-lg font-semibold mb-2">Phone</h3>
+                <p class="text-light-gray text-sm">+91 8805547785</p>
+            </a>
+            
+            <!-- Email -->
+            <a href="mailto:shendemrunal01@gmail.com" class="card-hover bg-navy rounded-lg p-6 block">
+                <i class="fas fa-envelope text-3xl text-peach mb-3"></i>
+                <h3 class="text-lg font-semibold mb-2">Email</h3>
+                <p class="text-light-gray text-sm">shendemrunal01@gmail.com</p>
+            </a>
+            
+            <!-- LinkedIn -->
+            <a href="http://linkedin.com/in/mrunal-shende" target="_blank" class="card-hover bg-navy rounded-lg p-6 block">
+                <i class="fab fa-linkedin text-3xl text-peach mb-3"></i>
+                <h3 class="text-lg font-semibold mb-2">LinkedIn</h3>
+                <p class="text-light-gray text-sm">linkedin.com/in/mrunal-shende</p>
+            </a>
+            
+            <!-- GitHub -->
+            <a href="https://github.com/Mrunal-Shende" target="_blank" class="card-hover bg-navy rounded-lg p-6 block">
+                <i class="fab fa-github text-3xl text-peach mb-3"></i>
+                <h3 class="text-lg font-semibold mb-3">GitHub</h3>
+                <p class="text-light-gray text-sm">github.com/mrunal-shende</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy py-6 text-center text-gray-400 text-sm">
+        © 2025 Mrunal Shende. All Rights Reserved.
+    </footer>
+
+</body>
+</html>

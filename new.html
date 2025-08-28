@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mrunal Shende - Full Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-navy': '#0D1D25',
+                        'navy': '#104C64',
+                        'light-gray': '#C6C6D0',
+                        'peach': '#D59D80',
+                        'orange': '#C0754D',
+                        'brown': '#85410F'
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #0D1D25 0%, #104C64 100%);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(13, 29, 37, 0.3);
+        }
+        .skill-tag {
+            background: linear-gradient(45deg, #C0754D, #D59D80);
+            transition: all 0.3s ease;
+        }
+        .skill-tag:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(192, 117, 77, 0.4);
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(45deg, #C0754D, #D59D80);
+            border-radius: 2px;
+        }
+        .typing-animation {
+            border-right: 2px solid #D59D80;
+            animation: typing 3s steps(30) infinite, blink 1s infinite;
+        }
+        @keyframes typing {
+            0%, 50% { width: 0; }
+            100% { width: 100%; }
+        }
+        @keyframes blink {
+            0%, 50% { border-color: transparent; }
+            51%, 100% { border-color: #D59D80; }
+        }
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body class="bg-light-gray text-dark-navy font-sans">
+    <!-- Navigation -->
+    <nav class="gradient-bg text-white fixed w-full top-0 z-50 shadow-lg">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-peach">Mrunal Shende</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#home" class="hover:text-peach transition-colors cursor-pointer">Home</a>
+                    <a href="#about" class="hover:text-peach transition-colors cursor-pointer">About</a>
+                    <a href="#experience" class="hover:text-peach transition-colors cursor-pointer">Experience</a>
+                    <a href="#projects" class="hover:text-peach transition-colors cursor-pointer">Projects</a>
+                    <a href="#contact" class="hover:text-peach transition-colors cursor-pointer">Contact</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-2xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+            <div id="mobile-menu" class="md:hidden mt-4 space-y-2 hidden">
+                <a href="#home" class="block hover:text-peach transition-colors cursor-pointer">Home</a>
+                <a href="#about" class="block hover:text-peach transition-colors cursor-pointer">About</a>
+                <a href="#experience" class="block hover:text-peach transition-colors cursor-pointer">Experience</a>
+                <a href="#projects" class="block hover:text-peach transition-colors cursor-pointer">Projects</a>
+                <a href="#contact" class="block hover:text-peach transition-colors cursor-pointer">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+   <section id="home" class="gradient-bg text-white min-h-screen flex items-center pt-20">
+    <div class="container mx-auto px-6">
+        <div class="flex flex-col lg:flex-row items-center">
+            
+            <!-- LEFT SIDE (Text + Buttons) -->
+            <div class="lg:w-1/2 mb-10 lg:mb-0">
+                <h1 class="text-5xl lg:text-7xl font-bold mb-6">
+                    Hi, I'm <span class="text-peach">Mrunal</span>
+                </h1>
+                <div class="text-2xl lg:text-3xl mb-6 h-12 overflow-hidden">
+                    <div class="typing-animation whitespace-nowrap">Full Stack Developer</div>
+                </div>
+                <p class="text-xl mb-8 text-light-gray leading-relaxed">
+                    Building scalable, responsive web applications with expertise in Node.js, React.js, and AI integration.
+                </p>
+                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="#contact" class="bg-peach hover:bg-orange text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 text-center cursor-pointer">
+                        Get In Touch
+                    </a>
+                    <a href="#projects" class="border-2 border-peach text-peach hover:bg-peach hover:text-white px-8 py-3 rounded-full font-semibold transition-all duration-300 text-center cursor-pointer">
+                        View Projects
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE (Full Height Image from Corner to Middle) -->
+<div class="lg:w-1/2 flex justify-center lg:justify-end">
+  <img src="C:\Users\DELL\Downloads\Panodaki_robot_görsellerim__-removebg-preview.png" 
+       alt="Developer Illustration" 
+       class="w-64 lg:w-80 h-auto object-contain walking-animation">
+</div>
+
+<style>
+@keyframes walkIn {
+  0% {
+    transform: translateX(-150px) scale(0.9);
+    opacity: 0;
+  }
+  60% {
+    transform: translateX(20px) scale(1.05);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(0) scale(1);
+  }
+}
+
+.walking-animation {
+  animation: walkIn 2s ease-out forwards;
+}
+</style>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        </div>
+    </div>
+</section>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+  <!-- About Section -->
+<section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-6">
+        <h2 class="section-title text-4xl font-bold text-center mb-16">About Me</h2>
+        <div class="grid lg:grid-cols-2 gap-12 items-stretch">
+            
+            <!-- LEFT SIDE (About Text) -->
+            <div class="bg-white p-8 rounded-2xl shadow-md h-full flex flex-col justify-between">
+                <div>
+                    <p class="text-lg mb-6 leading-relaxed">
+                        I'm a passionate full-stack developer with a strong foundation in building scalable, responsive web applications. Currently pursuing my Master's in Computer Applications while gaining hands-on experience in modern web technologies.
+                    </p>
+                    <p class="text-lg mb-8 leading-relaxed">
+                        My expertise spans across Node.js, React.js, Java, and Generative AI integration. I love solving complex problems and creating efficient solutions that make a real impact.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange mb-2">92%</div>
+                        <div class="text-gray-600">AI Model Accuracy</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange mb-2">500+</div>
+                        <div class="text-gray-600">Concurrent Requests</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange mb-2">60%</div>
+                        <div class="text-gray-600">Response Time Reduction</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-3xl font-bold text-orange mb-2">Top 5%</div>
+                        <div class="text-gray-600">HackerRank Ranking</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- RIGHT SIDE (Technical Skills same height as About) -->
+            <div class="bg-gray-50 p-8 rounded-2xl shadow-md h-full">
+                <h3 class="text-2xl font-bold mb-6">Technical Skills</h3>
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-semibold mb-3">Languages</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag text-white px-3 py-1 rounded-full text-sm">Java</span>
+                            <span class="skill-tag text-white px-3 py-1 rounded-full text-sm">Python</span>
+                            <span class="skill-tag text-white px-3 py-1 rounded-full text-sm">JavaScript</span>
+                            <span class="skill-tag text-white px-3 py-1 rounded-full text-sm">HTML</span>
+                            <span class="skill-tag text-white px-3 py-1 rounded-full text-sm">CSS</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-3">Frameworks & Libraries</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag text-white px-3 py-1 rounded-full text-sm">Node.js</span>
+                            <span class="skill-tag text-white px-3 py-1 rounded-full text-sm">React.js</span>
+                            <span class="skill-tag text-white px-3 py-1 rounded-full text-sm">Express.js</span>
+                            <span class="skill-tag text-white px-3 py-1 rounded-full text-sm">Socket.IO</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold mb-3">Databases & Tools</h4>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-tag text-white px-3 py-1 rounded-full text-sm">MongoDB</span>
+                            <span class="skill-tag text-white px-3 py-1 rounded-full text-sm">MySQL</span>
+                            <span class="skill-tag text-white px-3 py-1 rounded-full text-sm">Redis</span>
+                            <span class="skill-tag text-white px-3 py-1 rounded-full text-sm">Docker</span>
+                            <span class="skill-tag text-white px-3 py-1 rounded-full text-sm">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</section>
+
+    </div>
+</section>
+
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-4xl font-bold text-center mb-16">Experience</h2>
+            <div class="space-y-8">
+                <!-- Google Internship -->
+                <div class="card-hover bg-white rounded-lg shadow-lg p-8">
+                    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-navy">Virtual AI & ML Intern</h3>
+                            <p class="text-xl text-orange font-semibold">Google</p>
+                        </div>
+                        <div class="text-gray-600 mt-2 lg:mt-0">
+                            <i class="fas fa-calendar-alt mr-2"></i>Virtual Internship
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange mr-3 mt-1"></i>
+                            Developed and evaluated three AI/ML models achieving 92% predictive accuracy, surpassing benchmarks by 15%
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange mr-3 mt-1"></i>
+                            Collaborated with virtual team to debug and refine model training pipelines
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange mr-3 mt-1"></i>
+                            Conducted in-depth data analysis on large datasets for a 10-week project
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- LIVEWIRE Internship -->
+                <div class="card-hover bg-white rounded-lg shadow-lg p-8">
+                    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-navy">Java Developer Intern</h3>
+                            <p class="text-xl text-orange font-semibold">LIVEWIRE Academy (India)</p>
+                        </div>
+                        <div class="text-gray-600 mt-2 lg:mt-0">
+                            <i class="fas fa-calendar-alt mr-2"></i>Internship
+                        </div>
+                    </div>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange mr-3 mt-1"></i>
+                            Contributed to full development lifecycle for three Java-based applications
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange mr-3 mt-1"></i>
+                            Implemented core business logic and RESTful APIs, passing 95% of unit tests
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check-circle text-orange mr-3 mt-1"></i>
+                            Reduced critical bug backlog by 20% through effective troubleshooting
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-4xl font-bold text-center mb-16">Featured Projects</h2>
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Am Well Project -->
+            
+<div class="card-hover bg-gradient-to-br from-navy to-dark-navy text-white rounded-lg shadow-xl p-8">
+    <div class="flex items-center mb-6">
+        <i class="fas fa-heartbeat text-4xl text-peach mr-4"></i>
+        <h3 class="text-2xl font-bold">Am Well - Virtual Healthcare Assistant</h3>
+    </div>
+    <p class="text-light-gray mb-6 leading-relaxed">
+        Engineered secure RESTful APIs with real-time ambulance tracking and AI chatbot integration, reducing patient query response time by 60%.
+    </p>
+    <div class="mb-6">
+        <h4 class="font-semibold mb-3">Key Features:</h4>
+        <ul class="space-y-2 text-sm">
+            <li class="flex items-center">
+                <i class="fas fa-check text-peach mr-2"></i>
+                Real-time ambulance tracking
+            </li>
+            <li class="flex items-center">
+                <i class="fas fa-check text-peach mr-2"></i>
+                AI chatbot integration
+            </li>
+            <li class="flex items-center">
+                <i class="fas fa-check text-peach mr-2"></i>
+                500+ concurrent requests handling
+            </li>
+        </ul>
+    </div>
+    <div class="flex flex-wrap gap-2 mb-6">
+        <span class="bg-peach text-white px-3 py-1 rounded-full text-xs">Node.js</span>
+        <span class="bg-peach text-white px-3 py-1 rounded-full text-xs">MongoDB</span>
+        <span class="bg-peach text-white px-3 py-1 rounded-full text-xs">Socket.IO</span>
+        <span class="bg-peach text-white px-3 py-1 rounded-full text-xs">AI API</span>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="flex gap-4">
+        <!-- GitHub Link -->
+        <a href="https://github.com/Mrunal-Shende/Amwell" target="_blank" 
+           class="bg-peach hover:bg-opacity-90 text-white px-5 py-2 rounded-lg shadow-md font-medium transition">
+           <i class="fab fa-github mr-2"></i> GitHub
+        </a>
+
+        <!-- Demo Video -->
+        <a href="assets/videos/amwell-demo.mp4" target="_blank" 
+           class="bg-white text-navy px-5 py-2 rounded-lg shadow-md font-medium transition hover:bg-gray-100">
+           🎥 Demo
+        </a>
+    </div>
+</div>
+
+
+
+                <!-- E-Commerce Project -->
+      <div class="card-hover bg-gradient-to-br from-orange to-brown text-white rounded-lg shadow-xl p-8">
+    <div class="flex items-center mb-6">
+        <i class="fas fa-shopping-cart text-4xl text-white mr-4"></i>
+        <h3 class="text-2xl font-bold">E-Commerce Microservices Platform</h3>
+    </div>
+    <p class="text-light-gray mb-6 leading-relaxed">
+        Architected scalable e-commerce platform using microservices architecture with JWT authentication and Redis caching.
+    </p>
+    <div class="mb-6">
+        <h4 class="font-semibold mb-3">Key Features:</h4>
+        <ul class="space-y-2 text-sm">
+            <li class="flex items-center">
+                <i class="fas fa-check text-white mr-2"></i>
+                Microservices architecture
+            </li>
+            <li class="flex items-center">
+                <i class="fas fa-check text-white mr-2"></i>
+                JWT authentication
+            </li>
+            <li class="flex items-center">
+                <i class="fas fa-check text-white mr-2"></i>
+                30% reduction in database queries
+            </li>
+        </ul>
+    </div>
+    <div class="flex flex-wrap gap-2 mb-6">
+        <span class="bg-white text-orange px-3 py-1 rounded-full text-xs">Node.js</span>
+        <span class="bg-white text-orange px-3 py-1 rounded-full text-xs">Redis</span>
+        <span class="bg-white text-orange px-3 py-1 rounded-full text-xs">Docker</span>
+        <span class="bg-white text-orange px-3 py-1 rounded-full text-xs">Nginx</span>
+    </div>
+
+    <!-- 🔹 GitHub Button Only -->
+    <div class="flex flex-wrap gap-4">
+        <a href="https://github.com/Mrunal-Shende/E-commerce" target="_blank"
+           class="bg-white text-orange hover:bg-light-gray px-6 py-2 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 flex items-center">
+            <i class="fab fa-github mr-2"></i> GitHub
+        </a>
+    </div>
+</div>
+
+
+        </div>
+    </section>
+
+    <!-- Education & Achievements -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-4xl font-bold text-center mb-16">Education & Achievements</h2>
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Education -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-navy mb-6">Education</h3>
+                    <div class="space-y-6">
+                        <div class="border-l-4 border-orange pl-6">
+                            <h4 class="text-xl font-semibold">Master of Computer Applications (MCA)</h4>
+                            <p class="text-orange font-medium">PR Pote Patil College of Engineering, Amravati</p>
+                            <p class="text-gray-600">Oct 2024 - Present</p>
+                        </div>
+                        <div class="border-l-4 border-peach pl-6">
+                            <h4 class="text-xl font-semibold">Bachelor of Commerce in Computer Application (BCCA)</h4>
+                            <p class="text-orange font-medium">Kamala Nehru College, Nagpur</p>
+                            <p class="text-gray-600">Jul 2021 - Jul 2024 | CGPA: 7.4/10</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Achievements -->
+                <div class="bg-white rounded-lg shadow-lg p-8">
+                    <h3 class="text-2xl font-bold text-navy mb-6">Certifications & Achievements</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-trophy text-orange text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">1st Place - Department-Level Project Showcase</h4>
+                                <p class="text-gray-600 text-sm">Innovative software solution</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-medal text-orange text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Python Gold Badge - HackerRank</h4>
+                                <p class="text-gray-600 text-sm">Top 5% ranking, 150+ challenges solved</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-certificate text-orange text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Accenture Job Simulation</h4>
+                                <p class="text-gray-600 text-sm">100% test case success rate</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-robot text-orange text-xl mr-4 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">AI & GitHub Copilot Expertise</h4>
+                                <p class="text-gray-600 text-sm">25% coding efficiency improvement</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="gradient-bg text-white py-20">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title text-4xl font-bold text-center mb-16">Get In Touch</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="text-center mb-12">
+                    <p class="text-xl text-light-gray leading-relaxed">
+                        I'm always interested in new opportunities and exciting projects. 
+                        Let's connect and discuss how we can work together!
+                    </p>
+                </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+    <!-- Phone -->
+    <a href="tel:8805547785" class="card-hover bg-navy rounded-lg p-6 block">
+        <i class="fas fa-phone text-3xl text-peach mb-3"></i>
+        <h3 class="text-lg font-semibold mb-2">Phone</h3>
+        <p class="text-light-gray text-sm">8805547785</p>
+    </a>
+
+    <!-- Email -->
+    <a href="mailto:shendemrunal01@gmail.com" class="card-hover bg-navy rounded-lg p-6 block">
+        <i class="fas fa-envelope text-3xl text-peach mb-3"></i>
+        <h3 class="text-lg font-semibold mb-2">Email</h3>
+        <p class="text-light-gray text-sm">shendemrunal01@gmail.com</p>
+    </a>
+    <!-- LinkedIn -->
+    <a href="http://linkedin.com/in/mrunal-shende" target="_blank" class="card-hover bg-navy rounded-lg p-6 block">
+        <i class="fab fa-linkedin text-3xl text-peach mb-3"></i>
+        <h3 class="text-lg font-semibold mb-2">LinkedIn</h3>
+        <p class="text-light-gray text-sm">linkedin.com/in/mrunal-shende</p>
+    </a>
+    <!-- GitHub -->
+    <a href="https://github.com/Mrunal-Shende" target="_blank" class="card-hover bg-navy rounded-lg p-6 block">
+        <i class="fab fa-github text-3xl text-peach mb-3"></i>
+        <h3 class="text-lg font-semibold mb-3">GitHub</h3>
+        <p class="text-light-gray text-sm">github.com/mrunal-shende</p>
+    </a>
+</div>
+                </div>
+                <div class="text-center mt-12">
+                    <button class="bg-peach hover:bg-orange text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+                        <i class="fas fa-download mr-2"></i>
+                        Download Resume
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-navy text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-light-gray">
+                © 2024 Mrunal Shende. Built with passion and modern web technologies.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+                // Close mobile menu if open
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Typing animation
+        const typingText = document.querySelector('.typing-animation');
+        const texts = ['Full Stack Developer', 'AI Enthusiast', 'Problem Solver', 'Tech Innovator'];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeText() {
+            const currentText = texts[textIndex];
+            
+            if (isDeleting) {
+                typingText.textContent = currentText.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingText.textContent = currentText.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentText.length) {
+                setTimeout(() => isDeleting = true, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % texts.length;
+            }
+
+            setTimeout(typeText, isDeleting ? 50 : 100);
+        }
+
+        typeText();
+
+        // Add scroll effect to navigation
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('shadow-xl');
+            } else {
+                nav.classList.remove('shadow-xl');
+            }
+        });
+
+        // Add intersection observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all cards and sections
+        document.querySelectorAll('.card-hover, section').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'975d799865074192',t:'MTc1NjMxNzY5NS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
